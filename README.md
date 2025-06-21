@@ -6,7 +6,7 @@
 [![GitHub repo size](https://img.shields.io/github/repo-size/Soyunomas/web-censure-text?style=flat-square)](https://github.com/Soyunomas/web-censure-text)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-**Web Image Censor** es una aplicación web auto-contenida que te permite censurar información sensible en imágenes directamente en tu navegador. Utiliza Tesseract.js para el Reconocimiento Óptico de Caracteres (OCR) y te permite definir reglas mediante palabras clave y expresiones regulares para ocultar automáticamente el texto detectado.
+**Web Image Censor** es una aplicación web autocontenida que te permite censurar información sensible en imágenes directamente en tu navegador. Utiliza Tesseract.js para el Reconocimiento Óptico de Caracteres (OCR) y te permite definir reglas mediante palabras clave y expresiones regulares para ocultar automáticamente el texto detectado.
 
 Es especialmente útil si necesitas subir documentos escaneados o capturas de pantalla a servicios de terceros (como modelos de Inteligencia Artificial, almacenamiento en la nube, etc.) y quieres asegurar la privacidad eliminando datos personales o confidenciales antes de hacerlo. ¡Todo el procesamiento se realiza localmente en tu navegador, sin que tus imágenes salgan de tu equipo!
 
@@ -14,22 +14,29 @@ Es especialmente útil si necesitas subir documentos escaneados o capturas de pa
 
 <table>
   <tr>
-    <td colspan="2" align="center" style="padding:10px;">
+    <td align="center" style="padding:10px;">
       <strong>1. Interfaz Principal de la Aplicación:</strong><br>
       <em>Aquí se muestra la vista general de Web Image Censor, donde se definen las reglas, se cargan imágenes y se ven los resultados.</em><br><br>
-      <img src="screenshot1.png" alt="Captura de pantalla de la interfaz principal de Web Image Censor" style="width:100%; max-width:800px; border:1px solid #ddd;">
+      <img src="screenshot1.png" alt="Captura de pantalla de la interfaz principal de Web Image Censor" style="width:100%; max-width:400px; border:1px solid #ddd;">
     </td>
   </tr>
+</table>
+
+<br>
+
+A continuación se muestra un ejemplo de una imagen original y su versión censurada:
+
+<br>
+
+<table>
   <tr>
     <td align="center" style="width:50%; padding:10px; vertical-align: top;">
-      <strong>2. Ejemplo de Censura - Datos del Cliente:</strong><br>
-      <em>Esta captura muestra cómo se censuran los datos personales en la sección de información del cliente de un documento de ejemplo.</em><br><br>
-      <img src="screenshot2.png" alt="Ejemplo de censura en datos del cliente" style="width:100%; max-width:400px; border:1px solid #ddd;">
+      <strong>Imagen original</strong><br><br>
+      <img src="screenshot2.png" alt="Imagen original antes de la censura" style="width:100%; max-width:400px; border:1px solid #ddd;">
     </td>
     <td align="center" style="width:50%; padding:10px; vertical-align: top;">
-      <strong>3. Ejemplo de Censura - Detalles en el Cuerpo del Texto:</strong><br>
-      <em>En esta imagen se puede apreciar la censura aplicada a información sensible como números de referencia, fechas, correos electrónicos y DNI dentro del cuerpo principal del documento.</em><br><br>
-      <img src="screenshot3.png" alt="Ejemplo de censura en el cuerpo del texto" style="width:100%; max-width:400px; border:1px solid #ddd;">
+      <strong>Imagen censurada</strong><br><br>
+      <img src="screenshot3.png" alt="Imagen con información sensible censurada" style="width:100%; max-width:400px; border:1px solid #ddd;">
     </td>
   </tr>
 </table>
@@ -45,14 +52,14 @@ Es especialmente útil si necesitas subir documentos escaneados o capturas de pa
 *   🔂 **Procesamiento por Lotes:** Sube y procesa múltiples imágenes a la vez, ahorrando tiempo.
 *   🖼️ **Vista Previa Instantánea:** Visualiza la imagen censurada y el texto OCR detectado (para depuración) antes de descargar.
 *   💾 **Descarga Individual o en ZIP:** Descarga las imágenes procesadas una por una o todas juntas en un práctico archivo .zip.
-*   🔌 **Sin Dependencias Externas (en tiempo de ejecución):** Una vez cargada, la aplicación funciona offline (Tesseract.js y otras librerías se cargan desde CDNs, pero el procesamiento es local).
+*   🔌 **Funcionamiento Autónomo Tras Carga Inicial:** Aunque las librerías principales (como Tesseract.js) y los datos de idioma del OCR se cargan inicialmente desde CDNs (requiriendo conexión), una vez que todo está cargado en tu navegador, la aplicación puede funcionar offline para el procesamiento de imágenes. El procesamiento en sí es 100% local.
 
 ## 🚀 Pruébalo Ahora
 
 Puedes probar **Web Image Censor** directamente desde GitHub Pages:
 [**https://Soyunomas.github.io/web-censure-text/censuretext.html**](https://Soyunomas.github.io/web-censure-text/censuretext.html)
 
-*(Nota: La primera vez que selecciones un idioma OCR, puede tardar un poco en descargar los datos del idioma correspondiente).*
+*(Nota: La primera vez que selecciones un idioma OCR diferente al inicial, puede tardar un poco en descargar los datos del idioma correspondiente).*
 
 ## ⚙️ Cómo Usarlo
 
@@ -63,35 +70,34 @@ Usar **Web Image Censor** es sencillo e intuitivo. Sigue estos pasos:
 
 2.  **Configuración Inicial (Opcional pero recomendado):**
     *   **Idioma de la Interfaz:** Selecciona tu idioma preferido para la interfaz de usuario haciendo clic en una de las banderas en la esquina superior derecha.
-    *   **Idioma del OCR:** Ve a la sección de "Ajustes" (que aparece tras la inicialización del OCR) y elige el idioma principal del texto en tus imágenes desde el desplegable "Idioma del OCR". Esto es crucial para una detección precisa. La primera vez que selecciones un idioma, puede tardar unos segundos en cargarse.
+    *   **Idioma del OCR:** Ve a la sección "Ajustes" (que aparece tras la inicialización del OCR) y elige el idioma principal del texto en tus imágenes desde el desplegable "Idioma del OCR". Esto es crucial para una detección precisa. La primera vez que selecciones un idioma, puede tardar unos segundos en cargarse.
 
-3.  **1. Define Reglas de Censura:**
+3.  **Define las Reglas de Censura:**
     *   **Palabras Clave:** En el área de texto "Palabras Clave", introduce una por línea las palabras o frases clave que preceden a la información que quieres censurar (ej. `Nombre:`, `Dirección:`, `Email:`). La aplicación **censurará el texto que sigue a estas palabras en la misma línea**.
     *   **Expresiones Regulares:** En el área de texto "Expresiones Regulares", introduce una por línea las expresiones regulares (formato JavaScript) para patrones más complejos (ej. correos electrónicos, DNIs, números de teléfono). Consulta la tabla de ejemplos más abajo para ideas.
 
-4.  **2. Cargar Imágenes:**
+4.  **Carga las Imágenes:**
     *   Haz clic en "Seleccionar archivos" o arrastra y suelta tus imágenes (formatos PNG o JPG) en el área designada.
     *   Verás un mensaje indicando cuántos archivos se han seleccionado.
 
-5.  **Procesar Imágenes:**
+5.  **Procesa las Imágenes:**
     *   Una vez que hayas definido tus reglas y cargado tus imágenes, el botón "Procesar Imágenes" se habilitará. Haz clic en él.
     *   La aplicación procesará cada imagen, aplicando el OCR y las reglas de censura. Verás el progreso debajo del botón.
 
-6.  **3. Resultados:**
+6.  **Revisa los Resultados:**
     *   Las miniaturas de las imágenes procesadas aparecerán en la sección "Resultados".
     *   Haz clic en cualquier miniatura para abrir una **vista previa** más grande en una ventana modal.
     *   En la ventana modal, también puedes:
         *   Ver el texto OCR detectado (útil para depuración o para refinar tus reglas) activando "Mostrar/Ocultar Texto OCR Detectado (Depuración)".
-        *   Descargar la imagen individualmente (ver sección de descarga).
+        *   Descargar la imagen individualmente haciendo clic en "Descargar Imagen".
 
 ## 📥 Descarga de Resultados
 
-Una vez que tus imágenes han sido procesadas, tienes dos opciones para descargarlas:
+Una vez que tus imágenes han sido procesadas, tienes estas opciones para descargarlas:
 
 *   **Descarga Individual:**
-    1.  En la galería de "Resultados", haz clic en la miniatura de la imagen que deseas descargar.
-    2.  Se abrirá la ventana modal de vista previa.
-    3.  Haz clic en el botón **"Descargar Imagen"** en la parte inferior de la modal. La imagen se guardará con el prefijo `censored_` seguido del nombre original del archivo.
+    1.  Como se mencionó arriba, en la galería de "Resultados", haz clic en la miniatura de la imagen.
+    2.  En la ventana modal de vista previa, haz clic en el botón **"Descargar Imagen"**. La imagen se guardará con el prefijo `censored_` seguido del nombre original del archivo.
 
 *   **Descarga Múltiple (ZIP):**
     1.  Después de procesar al menos una imagen, el botón **"Descargar Todo (.zip)"** debajo de la galería de resultados se habilitará.
@@ -137,7 +143,7 @@ La necesidad de compartir información visual (documentos, capturas) con herrami
 
 ## 📜 Licencia
 
-Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles (si no existe, puedes añadir un archivo `LICENSE` con el texto de la licencia MIT).
+Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles. (Si el archivo `LICENSE` no existe en tu repositorio, asegúrate de añadir uno con el texto de la licencia MIT).
 
 ---
 
