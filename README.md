@@ -12,17 +12,27 @@ Es especialmente útil si necesitas subir documentos escaneados o capturas de pa
 
 ## 🖼️ Capturas de Pantalla
 
-**1. Interfaz Principal de la Aplicación:**
-*Aquí se muestra la vista general de Web Image Censor, donde se definen las reglas, se cargan imágenes y se ven los resultados.*
-![Captura de pantalla de la interfaz principal de Web Image Censor](screenshot1.png)
-
-**2. Ejemplo de Censura - Datos del Cliente:**
-*Esta captura muestra cómo se censuran los datos personales en la sección de información del cliente de un documento de ejemplo.*
-![Ejemplo de censura en datos del cliente](screenshot2.png)
-
-**3. Ejemplo de Censura - Detalles en el Cuerpo del Texto:**
-*En esta imagen se puede apreciar la censura aplicada a información sensible como números de referencia, fechas, correos electrónicos y DNI dentro del cuerpo principal del documento.*
-![Ejemplo de censura en el cuerpo del texto](screenshot3.png)
+<table>
+  <tr>
+    <td colspan="2" align="center" style="padding:10px;">
+      <strong>1. Interfaz Principal de la Aplicación:</strong><br>
+      <em>Aquí se muestra la vista general de Web Image Censor, donde se definen las reglas, se cargan imágenes y se ven los resultados.</em><br><br>
+      <img src="screenshot1.png" alt="Captura de pantalla de la interfaz principal de Web Image Censor" style="width:100%; max-width:800px; border:1px solid #ddd;">
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="width:50%; padding:10px; vertical-align: top;">
+      <strong>2. Ejemplo de Censura - Datos del Cliente:</strong><br>
+      <em>Esta captura muestra cómo se censuran los datos personales en la sección de información del cliente de un documento de ejemplo.</em><br><br>
+      <img src="screenshot2.png" alt="Ejemplo de censura en datos del cliente" style="width:100%; max-width:400px; border:1px solid #ddd;">
+    </td>
+    <td align="center" style="width:50%; padding:10px; vertical-align: top;">
+      <strong>3. Ejemplo de Censura - Detalles en el Cuerpo del Texto:</strong><br>
+      <em>En esta imagen se puede apreciar la censura aplicada a información sensible como números de referencia, fechas, correos electrónicos y DNI dentro del cuerpo principal del documento.</em><br><br>
+      <img src="screenshot3.png" alt="Ejemplo de censura en el cuerpo del texto" style="width:100%; max-width:400px; border:1px solid #ddd;">
+    </td>
+  </tr>
+</table>
 
 ## ✨ Características Principales
 
